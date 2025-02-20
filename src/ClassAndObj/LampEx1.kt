@@ -11,6 +11,7 @@ fun main() {
     l1.displayStatus()
 }
 
+// By Default Classes are Final means they cannot be inherited
 class Lamp {
     // data members
     private var isOn: Boolean = false
