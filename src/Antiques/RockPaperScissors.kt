@@ -1,21 +1,25 @@
 package Antiques
 
 fun main() {
-    println("Enter Your Choice :\n1. Rock\n2. Paper\n3. Scissors\nSelect Any One from Above :")
-    val userInput = readln().toInt()
-    val systemInput = (1..3).random()
+    var userInput = 1
+    do {
+        println("\n1. Rock \n2. Paper \n3. Scissors \n0. Exit Game \nSelect Any One from Above :\n")
+        print("Enter Your Choice : ")
+        userInput = readln().toInt()
+        if(userInput==0){return}
+        val systemInput = (1..3).random()
 
-    println("\n\n")
-    input("You", userInput)
-    input("System", systemInput)
+        println("\n\n")
+        input("You", userInput)
+        input("System", systemInput)
 
-    val winner: String = when {
-        userInput == systemInput -> "Tie"
-        (userInput == 1 && systemInput == 3) || (userInput == 2 && systemInput == 1) || (userInput == 3 && systemInput == 2) -> "You"
-        else -> "System"
-    }
+        val winner: String = when {
+            userInput == systemInput -> "Tie"
+            (userInput == 1 && systemInput == 3) || (userInput == 2 && systemInput == 1) || (userInput == 3 && systemInput == 2) -> "You"
+            else -> "System"
+        }
 
-    /*
+        /*
     if (userInput == 1 && systemInput == 3) {
         println("Hurray ! You Won")
     } else if (userInput == 2 && systemInput == 1) {
@@ -29,11 +33,16 @@ fun main() {
     }
     */
 
-    if (winner == "Tie") {
-        println("Match Draw")
-    } else {
-        println("$winner Won")
-    }
+        if (winner == "Tie") {
+            println("Match Draw")
+        } else {
+            println("$winner Won")
+        }
+
+        println("\n\nWanna Play Again ?\nEnter 4 to Play Again\nEnter 0 to Exit")
+        userInput = readln().toInt()
+
+    } while (userInput != 0)
 }
 
 fun input(inputBy: String, value: Int) {
