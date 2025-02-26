@@ -6,9 +6,18 @@ fun main() {
     val systemInput = (1..3).random()
 
     println("\n\n")
-    input("You",userInput)
+    input("Player",userInput)
     input("System",systemInput)
 
+    val winner:String = when{
+        userInput == systemInput -> "Tie"
+        userInput == 1 && systemInput == 3 -> "Player"
+        userInput == 2 && systemInput == 1 -> "Player"
+        userInput == 3 && systemInput == 2 -> "Player"
+        else -> "System"
+    }
+
+    /*
     if (userInput == 1 && systemInput == 3) {
         println("Hurray ! You Won")
     } else if (userInput == 2 && systemInput == 1) {
@@ -20,6 +29,7 @@ fun main() {
     } else {
         println("System Won !")
     }
+    */
 }
 
 fun input(inputBy: String, value: Int) {
