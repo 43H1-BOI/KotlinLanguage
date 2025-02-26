@@ -1,11 +1,5 @@
-# Some Important Points
+package ClassAndObj
 
-### About Classes and Objects
-In 1st Code , val means it's part of class
-and <br>
-In 2nd Code , val is not present means it is just getting passed as parameter
-
-```kotlin 
 // 1st Code
 class dog(val name: String){
     init {
@@ -29,8 +23,9 @@ fun main(){
     val r = dog("Robot")
     println("val name: String -> ${r.name}")
 
+    println()
+
     // In Cat, name is not property so we can't call the below : ${s.name}
     val s = cat("Stacy")
-    println("val name: String -> ${s.name}")
+//    println("val name: String -> ${s.name}")
 }
-```
