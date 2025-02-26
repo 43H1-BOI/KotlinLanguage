@@ -1,9 +1,11 @@
 # Some Important Points
 
 ### About Classes and Objects
-In 1st Code , val means it's part of class
-and <br>
-In 2nd Code , val is not present means it is just getting passed as parameter
+
+#### Parameter and data member in class
+- In 1st Code , val means it's part of class
+and
+- In 2nd Code , val is not present means it is just getting passed as parameter
 
 ```kotlin 
 // 1st Code
@@ -34,3 +36,8 @@ fun main(){
     println("val name: String -> ${s.name}")
 }
 ```
+
+#### Data Class
+- Data Class is a class which is only used to store data
+- This is not used to perform other actions
+- Creating Data Class means Creating `Own Data Type`
