@@ -6,10 +6,12 @@ fun main() {
         println("\n1. Rock \n2. Paper \n3. Scissors \n0. Exit Game \nSelect Any One from Above :\n")
         print("Enter Your Choice : ")
         userInput = readln().toInt()
-        if(userInput==0){return}
+        if (userInput == 0) {
+            continue
+        }
         val systemInput = (1..3).random()
 
-        println("\n\n")
+        println()
         input("You", userInput)
         input("System", systemInput)
 
@@ -39,10 +41,11 @@ fun main() {
             println("$winner Won")
         }
 
-        println("\n\nWanna Play Again ?\nEnter 4 to Play Again\nEnter 0 to Exit")
+        println("\nWanna Play Again ?\nEnter 4 to Play Again\nEnter 0 to Exit")
         userInput = readln().toInt()
 
     } while (userInput != 0)
+    println("Thanks for Playing")
 }
 
 fun input(inputBy: String, value: Int) {
