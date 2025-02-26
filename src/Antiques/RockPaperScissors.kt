@@ -30,8 +30,9 @@ fun main() {
         println("System Won !")
     }
     */
+
     if(winner == "Tie"){
-        println("")
+        println("Match Draw")
     } else {
         println("$winner Won")
     }
