@@ -41,3 +41,43 @@ fun main(){
 - Data Class is a class which is only used to store data
 - This is not used to perform other actions
 - Creating Data Class means Creating `Own Data Type`
+
+
+
+### Extras
+#### Comments in Kotlin
+```kotlin
+/*
+This is Multiline 
+Comment
+*/
+
+fun main(){
+    println("Hello Bhay!")
+    // this is a single line comment
+}
+
+```
+
+
+
+
+#### List in Kotlin
+```kotlin
+fun main() {
+    // immutable list
+    val shList = listOf("Laptop", "Extra SSD", "Laptop Stand")
+
+    // mutable list
+    val shopList = mutableListOf("PC", "Extra SSD", "Laptop Stand")
+
+    println(shList)
+    println(shopList)
+
+    shopList.add("Or Kuch Ni")
+    
+    // we cannot perform below action
+    //shList.add("Or Bhot Kuch Ni")
+
+}
+```
